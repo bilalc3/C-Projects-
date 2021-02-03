@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>My Webpage</title>
+
+    </head>
+    <body>
+        <h1 class= 'header'>Contact</h1>
+        <a href = 'index.html'>homepage</a>
+        <a href = 'second.html'>search</a>
+        <a href = 'third.html'>about</a>
+        <a href = 'fourth.html'>contact us</a><br>
+        <button id ='red'>2019</button>
+        <button id ='blue'>2018</button>
+        <button id ='green'>2017</button>
+        <p id = 'wins'>raps got </p>
+        <script>
+            document.querySelector("#red").onclick = function(){
+                document.querySelector ('body').style.backgroundColor= 'red';
+                document.querySelector("#wins").innerHTML = "raps got 52 wins"
+            }
+            document.querySelector("#blue").onclick= function(){
+                document.querySelector("body").style.backgroundColor = 'blue' ;
+                document.querySelector("#wins").innerHTML = "raps got 53 wins"
+
+            }
+            document.querySelector("#green").onclick= function(){
+                document.querySelector("body").style.backgroundColor = 'green' ;
+                document.querySelector("#wins").innerHTML = "raps got 48 wins"
+
+            }
+        </script>
+    </body>
+</html>
