@@ -1,0 +1,1 @@
+SELECT title FROM movies JOIN ratings ON movie_id = id where rating = 10.0;
