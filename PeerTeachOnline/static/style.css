@@ -1,0 +1,283 @@
+* {
+    margin: 0;
+    padding: 0px;
+}
+
+.wrapper {
+    width: 100%;
+}
+/*MEDIA SIZES*/
+@media only screen and (min-width: 768 px) {
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1 fr 1 fr 1 fr 1 fr;
+        grid-template-areas:
+        "title title"
+        "header header"
+        "header content"
+        "footer footer";
+    }
+    .login {
+        position: relative;
+        background: none;
+        border: 1px solid black;
+    
+        padding: 5px 15px;
+    
+        font-size: 17px;
+        left: 75%;
+
+
+        }
+}
+@media screen and (min-width: 1024 px) {
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1 fr 1 fr 1 fr 1 fr;
+        grid-template-areas: 
+        "title title"
+        "header header" 
+        "header content" 
+        "footer footer";
+
+    }
+    
+}
+/*----------------------TITLE---------------------------------*/
+.title {
+    grid-area: title;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+
+}   
+/*NAVBAR*/
+.navbar {
+    position: relative;
+    font-size: 95%;
+    right: 25px;
+    padding: 10px;
+    background: none;
+    border: none;
+  
+    
+}
+
+.logohome{
+    background-size: 24px;
+ 
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    
+}
+.homelogo{
+    transform: translate (-50%, -50%);
+    
+}
+/*LOGIN BUTTON FOR TITLE*/
+.login {
+    position: relative;
+    background: none;
+   border: 1px solid black;
+    
+    padding: 5px 15px;
+    font-size: 17px;
+    left: 92%;
+    
+}
+/*----------------------HEADER---------------------------------*/
+.header {
+    grid-area: header;
+    background: rgb(184, 184, 184);
+   padding: 0.5%;
+    text-align: center;
+    font-size: x-large;
+    font-style: italic;
+}
+    
+/*----------------------CONTENT---------------------------------*/
+.content {
+    grid-area: content;
+    background-image: url_for('static',filename = 'Images/image1.jpg');
+   /* background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("https://image.freepik.com/free-photo/multi-ethnic-group-young-people-studying-together-white-de_1139-987.jpg");*/
+   
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 20%;
+}
+
+
+/*LOGO FOR CENTRE OF PAGE*/
+.logo {
+    position: relative;
+    text-align: center;
+    bottom: 20px;
+    font-size: 400%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+/*SEARCH BAR FOR CENTRE OF PAGE*/
+.search {
+    position: relative;
+    text-align: center;
+}
+/*INPUT FOR SEARCH BAR*/
+.searchinput {
+    position: relative;
+    font-size: 100%;
+    font-weight: 40%;
+    width: 54%;
+    height: 75px;
+    border-radius: 40px;
+    background-color: transparent;
+    border:solid black;
+}
+/*SUBMIT BUTTON FOR SEARCH BAR*/
+
+.search-box {
+    position: absolute; 
+    height: 50%; 
+    left: 45%; 
+    transform: translate (-50%, -50%); 
+    background: black;
+    height: 40px; 
+    border-radius: 40px; 
+    padding: 10px;  
+    
+}
+
+.search-box:hover >.search-txt{
+    width:300px; 
+    padding: 0 6px; 
+
+}
+.search-box:hover >.search-btn{
+    background: darkgray; 
+
+}
+.search-btn {
+    color: yellow; 
+    float: right; 
+    width: 40px; 
+    border-radius: 50%;
+    background: black ; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    height: 40px; 
+    transition: 0.4s;
+
+}
+.search-txt {
+    border: none; 
+    background: none; 
+    outline: none; 
+    float: left;    
+    padding: 0; 
+    color: white; 
+    font-size: 16px; 
+    transition: 0.4s; 
+    line-height: 40px ; 
+    width: 0px; 
+
+
+}
+@media (min-width: 1000px) {
+   
+        /*--------------SEARCH BAR------------------*/
+
+.search-box {
+    position: absolute; 
+    height: 50%; 
+    left: 45%; 
+    transform: translate (-50%, -50%); 
+    background: black;
+    height: 40px; 
+    border-radius: 40px; 
+    padding: 10px;  
+    
+}
+
+.search-box:hover >.search-txt{
+    width:300px; 
+    padding: 0 6px; 
+
+}
+.search-box:hover >.search-btn{
+    background: darkgray; 
+
+}
+.search-btn {
+    color: yellow; 
+    float: right; 
+    width: 40px; 
+    border-radius: 50%;
+    background: black ; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    height: 35px; 
+    transition: 0.4s;
+
+}
+.search-txt {
+    border: none; 
+    background: none; 
+    outline: none; 
+    float: left;    
+    padding: 0; 
+    color: white; 
+    font-size: 16px; 
+    transition: 0.4s; 
+    line-height: 40px ; 
+    width: 0px; 
+
+
+}
+        
+}
+.footer{
+    background-color: dimgray;
+    font-size: small;
+    background-blend-mode: color-burn;
+}
+
+/*WHEN SCREEN REACHES CERTAIN SIZE THESE ARE OVERLOADED*/
+@media (max-width: 900px){
+    .login {
+        position: relative;
+        background: none;
+        border: 1px solid black;
+    
+        padding: 5px 15px;
+    
+        font-size: 17px;
+        left: 87%;
+
+
+        }
+}
+@media (max-width: 700px) {
+   
+    .searchbox {
+        left:10%;
+    }
+
+    .search-box:hover >.search-txt{
+        width:150px; 
+        padding: 0 6px; 
+    
+    }
+}
+
+@media (max-width: 700px) {
+   
+    .searchbox {
+        left:20%;
+    }
+}
+
